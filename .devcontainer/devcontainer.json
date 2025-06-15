@@ -3,6 +3,18 @@
 {
 	"name": "Rust",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/base:alpine",
-	"postAttachCommand": ".devcontainer/postCreateCommand.sh"
+	"image": "mcr.microsoft.com/devcontainers/rust:latest",
+	"mounts": [
+		{
+			"type": "volume",
+			"source": "rust-cache",
+			"target": "/root/.cargo"
+		},
+		{
+			"type": "volume",
+			"source": "rust-target",
+			"target": "/workspace/target"
+		}
+	],
+	"postAttachCommand": "bash .devcontainer/postAttachCommand.sh"
 }
