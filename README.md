@@ -1,4 +1,16 @@
 # atcoder-starterkit-rust
+## 概要
+RustでAtcoderをするためのスターターキット  
+以下を抱合  
+- rust-analyzer
+- rustfmt
+- clippy
+- cargo-compete
+
+## 使い方
+- clone
+- reopen container
+
 ## Reopen container後の対応
 ### rust-analyzer extensionのインストール
 最新版はatcoderで利用できるrustcのversion 1.70.0に対応していないため、下記でインストールする
